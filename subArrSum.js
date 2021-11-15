@@ -1,6 +1,8 @@
 // Please do not change the name of this function
 const subArrSum = (array) => {
-  // Your code here
-}
+  if (array.length === 0) {
+    return 0;
+  }
+};
 
-module.exports = { subArrSum }
+module.exports = { subArrSum };
