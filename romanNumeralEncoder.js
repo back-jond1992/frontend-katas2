@@ -1,6 +1,8 @@
 // Please do not change the name of this function
 const romanNumeralEncoder = (num) => {
-  // Your code here
-}
+  if (typeof num !== Number) return "Not a number";
 
-module.exports = { romanNumeralEncoder }
+  const romanNumerals = 
+};
+
+module.exports = { romanNumeralEncoder };
