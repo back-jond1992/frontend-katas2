@@ -1,7 +1,7 @@
-const { vowelShift } = require('../vowelShift')
+const { vowelShift } = require("../vowelShift");
 
-describe('vowelShift()', () => {
-  it('', () => {
-    // first test here
-  })
-})
+describe("vowelShift()", () => {
+  test("shifts vowels 1 place to right", () => {
+    expect(vowelShift("hello", 1)).toBe("holle");
+  });
+});
