@@ -6,17 +6,20 @@ const vowelShift = (str, num) => {
 
   const shiftedVowels = storedVowels.slice(-num).concat(storedVowels.slice(0, num));
 
-  console.log(shiftedVowels, "shifted");
-
   const vowellessString = str.replace(vowels, "#");
 
-  for (let i = 0; i < vowellessString.length; i++) {
-    if (vowellessString[i] === "#") {
-      let vowelIndex = i;
-      vowellessString[i] = shiftedVowels[vowelIndex];
+  function replacer(string, array) {
+    while (vowellessString.includes("#")) {
+      string.replace("#", array[0]);
+      array.shift();
     }
   }
-  return vowellessString;
+
+  const result = vowellessString.replace("#", shiftedVowels[0]);
+
+  console.log(vowellessString.includes("#"));
+
+  console.log(result);
 };
 
 module.exports = { vowelShift };
